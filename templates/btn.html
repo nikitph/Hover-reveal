@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    {% block script %}
+    {% endblock %}
+
+
+</head>
+
+<style>
+
+
+    body {
+        -webkit-perspective: 800px;
+    }
+
+    .wrap {
+        transition: -webkit-transform 1s ease-in;
+    }
+
+    .wrap div {
+        position: absolute;
+    }
+
+    .side-a {
+        z-index: 100;
+    }
+
+    .wrap:hover {
+        -webkit-transform: scaleZ(2) translateZ(200px);
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .a {
+
+        height: 50vh;
+        background: #EBEBEB;
+    }
+
+    .b {
+        height: 50vh;
+        background: #F48C31;
+    }
+
+    .c {
+        height: 8vh;
+        width: 20vh;
+        display: inline-block;
+        margin: auto;
+        background-color: rgba(0,0,0,0.8);
+        z-index: 100;
+        margin-top: -4vh;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 24px 21px -5px rgba(50, 50, 50, 0.61);
+        transition: all 0.7s ease-in;
+
+    }
+
+    .d {
+        margin: auto;
+        display: flex;
+        width: 140vh;
+    }
+
+    .d:hover .c{
+        margin-top: -10vh;
+        height: 50vh;
+        width: 40vh;
+        border-radius: 10px;
+
+    }
+
+    .d:hover .r{
+visibility: visible;
+        height: 50vh;
+        margin-left: -20px;
+        margin-top: -40px;
+
+
+    }
+
+     .d:hover .ce{
+         visibility: hidden;
+background-color: transparent;
+         height: 0;
+         overflow: hidden;
+
+    }
+
+    .r {
+visibility: hidden;
+        width: 100%;
+        height: 0%;
+        transition: all 0.7s ease-in;
+        background: white;
+        border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+        overflow: hidden;
+
+
+    }
+
+    .ce {
+
+        display: block;
+        color: white;
+        top:50%;
+        left:50%;
+        margin-top: 17px;
+    }
+
+    .tg {
+position: relative;
+        top:100px;
+        left: 60px;
+        margin-bottom: 150px;
+        z-index: 999;
+
+    }
+
+    .btn {
+        border-radius: 10px;
+    }
+
+
+
+
+
+
+
+</style>
+
+{% block style %}
+{% endblock %}
+
+
+<body>
+
+<div class="a"></div>
+
+<div class="b">
+    <div class="d">
+        <div class="c">
+
+
+            <div class="r">
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">First Name</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">Telephone</label>
+        </div>
+      </div>
+<div class="tg">
+        <button class="btn waves-effect center waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+    </div>
+    </form>
+  </div>
+
+            </div>
+
+<div class="ce center">
+
+            GET STARTED
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

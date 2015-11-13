@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    {% block script %}
+    {% endblock %}
+
+
+</head>
+
+<style>
+
+
+body {
+	-webkit-perspective: 800px;
+}
+
+.wrap {
+	transition: -webkit-transform 1s ease-in;
+}
+
+.wrap div {
+	position: absolute;
+}
+
+.side-a {
+	z-index: 100;
+}
+
+.wrap:hover {
+	-webkit-transform: scaleZ(2) translateZ(200px);
+}
+
+    body {
+        margin: 0;
+    }
+
+    .a {
+
+        height: 50vh;
+        background: #EBEBEB;
+    }
+
+    .b
+    {
+        height: 50vh;
+        background: #F48C31;
+    }
+
+     .c
+    {
+        height: 35vh;
+         width: 55vh;
+         background: white;
+         display: inline-block;
+         margin: auto;
+         margin-top: -17.5vh;
+        -webkit-box-shadow: 0px 24px 21px -5px rgba(50, 50, 50, 0.61);
+
+
+    }
+
+    .d {
+        margin: auto;
+        display: flex;
+        width: 140vh;
+    }
+
+    .effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "bn";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+
+    .e{
+        height: 20%;
+        background: #F6F6F6;
+    }
+
+    .j{
+        position: relative;
+        left: 50%;
+        right: 50%;
+        bottom: -40px;
+    }
+
+    .material-icons.md-48 { font-size: 48px; }
+
+    @font-face {
+        font-family:"cus";
+        src:url('/templates/Quicksand-Light.otf');
+        font-weight: normal;
+    }
+
+    .f{
+        display: inline-block;
+        right: 10px;
+        font-family: "cus", cursive;
+    }
+
+    .p{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .q{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left: 0;
+        background-image: url('http://media3.giphy.com/media/PIh4laWJlz9bq/giphy.gif');
+        opacity: 0.1;
+        z-index: 10;
+        transition: all 0.2s ease-in-out;
+
+    }
+
+    .r{
+        position: absolute;
+        overflow: hidden;
+        margin:auto;
+        top:300px;
+        left: 50%;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        z-index: 100;
+
+    }
+
+    #mn:hover .q{
+        opacity: 1;
+
+        transform: translateY(100px);
+    }
+
+    #mn:hover .r{
+        opacity: 1;
+        top:50%;
+    }
+
+
+
+</style>
+
+{% block style %}
+{% endblock %}
+
+
+<body>
+
+<div class="a"> </div>
+
+<div class="b">
+<div class="d effect2">
+    <div class="c effect2">
+        <div class="e">
+            <div>
+            <i class="material-icons md-48 j">face</i>
+
+
+            <div class="f">
+            Nikit Phadke
+        </div>
+                </div>
+
+        </div>
+
+
+
+</div>
+
+    <div class="c effect2" id="mn">
+                <div class="p"> a </div>
+
+        <div class="q"> b </div>
+        <div class="r"> This is the caption</div>
+
+
+</div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
